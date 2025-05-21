@@ -48,6 +48,7 @@ def main(args):
     
     if args.test_only:
         data_module = MyDataModule(args)
+        trainer = pl.Trainer(devices=[int(args.cuda)], accelerator='cuda', logger=True, callbacks=callbacks)
         trainer.test(model=model, datamodule=data_module)  # test
     else:
         
