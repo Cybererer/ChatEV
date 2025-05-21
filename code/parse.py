@@ -15,7 +15,7 @@ def parse_args():
     parser.add_argument('--weight_decay', default=1e-5, type=float)
     
     # hyper
-    parser.add_argument('--lr', default=1e-3, type=float)
+    parser.add_argument('--lr', default=1e-5, type=float)  
     parser.add_argument('--lr_scheduler', default='cosine', choices=['cosine'], type=str)
     parser.add_argument('--lr_decay_min_lr', default=1e-9, type=float)
     parser.add_argument('--lr_warmup_start_lr', default=1e-7, type=float)
